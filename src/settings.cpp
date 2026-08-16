@@ -46,4 +46,4 @@ int main() {
     addSetting("auto_save", true);
     printSettings();
     return 0;
-}
+}// minor tweak
