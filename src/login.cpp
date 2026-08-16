@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+const int MIN_PASSWORD_LENGTH = 6;
+
 void printLoginError(const std::string& username) {
     if (username.empty()) {
         std::cout << "Error: username cannot be empty" << std::endl;
