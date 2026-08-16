@@ -1,6 +1,11 @@
 #include <iostream>
 #include <string>
 
+void testProfile() {
+    UserProfile p{"Test User", "invalid-email"};
+    std::cout << "Test: " << (isValidEmail(p.email) ? "PASS" : "FAIL - expected invalid") << std::endl;
+}
+
 struct UserProfile {
     std::string name;
     std::string email;
