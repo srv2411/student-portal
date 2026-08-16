@@ -15,12 +15,19 @@ void printProfile(const UserProfile& profile) {
     std::cout << "Email: " << profile.email << std::endl;
 }
 
+void updateEmail(UserProfile& profile, const std::string& newEmail) {
+    if (isValidEmail(newEmail)) {
+        profile.email = newEmail;
+        std::cout << "Email updated successfully" << std::endl;
+    } else {
+        std::cout << "Update failed: invalid email" << std::endl;
+    }
+}
+
 int main() {
     UserProfile profile{"Srv", "srv@example.com"};
-    if (isValidEmail(profile.email)) {
-        printProfile(profile);
-    } else {
-        std::cout << "Invalid email address" << std::endl;
-    }
+    printProfile(profile);
+    updateEmail(profile, "srv.new@example.com");
+    printProfile(profile);
     return 0;
 }
