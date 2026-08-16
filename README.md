@@ -9,3 +9,4 @@
 ## Prerequisites
 - g++ / C++17 compiler
 - Git
+## Project Structure
