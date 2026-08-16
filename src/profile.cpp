@@ -35,4 +35,4 @@ int main() {
     updateEmail(profile, "srv.new@example.com");
     printProfile(profile);
     return 0;
-}
+}// belongs on profile branch
