@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
 
+void testLogin() {
+    std::cout << "Test: " << (validateLogin("srv", "pass123") ? "PASS" : "FAIL") << std::endl;
+}
+
 const int MIN_PASSWORD_LENGTH = 6;
 
 void printLoginError(const std::string& username) {
