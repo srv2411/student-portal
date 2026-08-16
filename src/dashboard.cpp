@@ -2,6 +2,17 @@
 #include <vector>
 #include <string>
 
+
+void filterWidgets(std::vector<std::string>& widgets, const std::string& keyword) {
+    std::vector<std::string> filtered;
+    for (const auto& w : widgets) {
+        if (w.find(keyword) != std::string::npos) {
+            filtered.push_back(w);
+        }
+    }
+    widgets = filtered;
+}
+
 void testDashboard() {
     std::vector<std::string> widgets = {"A", "B"};
     addWidget(widgets, "C");
