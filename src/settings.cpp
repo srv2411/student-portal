@@ -2,6 +2,12 @@
 #include <map>
 #include <string>
 
+void testSettings() {
+    addSetting("test_flag", false);
+    toggleSetting("test_flag");
+    std::cout << "Test: " << (settings["test_flag"] == true ? "PASS" : "FAIL") << std::endl;
+}
+
 void addSetting(const std::string& key, bool defaultValue) {
     if (settings.find(key) == settings.end()) {
         settings[key] = defaultValue;
@@ -33,6 +39,7 @@ void printSettings() {
 }
 
 int main() {
+    testSettings();
     printSettings();
     toggleSetting("dark_mode");
     printSettings();
