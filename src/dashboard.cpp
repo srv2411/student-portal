@@ -2,6 +2,12 @@
 #include <vector>
 #include <string>
 
+void testDashboard() {
+    std::vector<std::string> widgets = {"A", "B"};
+    addWidget(widgets, "C");
+    std::cout << "Test: " << (widgets.size() == 3 ? "PASS" : "FAIL") << std::endl;
+}
+
 bool removeWidget(std::vector<std::string>& widgets, const std::string& name) {
     for (auto it = widgets.begin(); it != widgets.end(); ++it) {
         if (*it == name) {
