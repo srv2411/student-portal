@@ -2,6 +2,15 @@
 #include <map>
 #include <string>
 
+void addSetting(const std::string& key, bool defaultValue) {
+    if (settings.find(key) == settings.end()) {
+        settings[key] = defaultValue;
+        std::cout << "Added new setting: " << key << std::endl;
+    } else {
+        std::cout << "Setting already exists: " << key << std::endl;
+    }
+}
+
 void toggleSetting(const std::string& key) {
     if (settings.find(key) != settings.end()) {
         settings[key] = !settings[key];
@@ -26,6 +35,8 @@ void printSettings() {
 int main() {
     printSettings();
     toggleSetting("dark_mode");
+    printSettings();
+    addSetting("auto_save", true);
     printSettings();
     return 0;
 }
