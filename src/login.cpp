@@ -1,6 +1,12 @@
 #include <iostream>
 #include <string>
 
+void printLoginError(const std::string& username) {
+    if (username.empty()) {
+        std::cout << "Error: username cannot be empty" << std::endl;
+    }
+}
+
 bool validateLogin(const std::string& username, const std::string& password) {
     return !username.empty() && password.length() >= 6;
 }
