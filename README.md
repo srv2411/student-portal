@@ -6,3 +6,6 @@
 ## How to Run
 1. Compile: g++ src/main.cpp -o student-portal
 2. Execute: ./student-portal
+## Prerequisites
+- g++ / C++17 compiler
+- Git
