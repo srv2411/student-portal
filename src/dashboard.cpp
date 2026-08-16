@@ -11,6 +11,7 @@ void filterWidgets(std::vector<std::string>& widgets, const std::string& keyword
         }
     }
     widgets = filtered;
+
 }
 
 void testDashboard() {
